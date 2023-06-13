@@ -1,9 +1,11 @@
 const comments = require("../data/comments")
 
+//getAll
 const list = (req,res) => {
     res.json(comments)
 }
 
+//getByID
 const show = (req, res) =>{
     const {id} = req.params
 
@@ -18,7 +20,7 @@ const create = (req, res) => {
     // console.log(body.body)
 
     const comment = {
-        "_id": commentsLength + 1,
+        _id: comments.length + 1,
         ...body,
         postId: 1
     }

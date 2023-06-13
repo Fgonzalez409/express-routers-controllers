@@ -1,9 +1,11 @@
 const products = require("../data/products")
 
+//getAll
 const list = (req,res) => {
     res.json(products)
 }
 
+//getByID
 const show = (req, res) =>{
     const {id} = req.params
 
@@ -18,7 +20,7 @@ const create = (req, res) => {
     // console.log(body.body)
 
     const product = {
-        "_id": productsLength + 1,
+        _id: products.length + 1,
         ...body,
         postId: 1
     }

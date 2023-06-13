@@ -7,7 +7,7 @@ const vehiclesControllers = require("../controller/vehicles")
 router.get("/vehicles", vehiclesControllers.list)
 
 //get comment by ID
-router.get("/vehicles/comment/:id", vehiclesControllers.show )
+router.get("/vehicles/:id", vehiclesControllers.show )
 
 //create comment
 router.post("/vehicles", vehiclesControllers.create)

@@ -7,7 +7,7 @@ const commentsControllers = require("../controller/comments")
 router.get("/comments", commentsControllers.list)
 
 //get comment by ID
-router.get("/comments/comment/:id", commentsControllers.show )
+router.get("/comments/:id", commentsControllers.show )
 
 //create comment
 router.post("/comments", commentsControllers.create)

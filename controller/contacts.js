@@ -1,9 +1,11 @@
 const contacts = require("../data/contacts")
 
+//getAll
 const list = (req,res) => {
     res.json(contacts)
 }
 
+//getByID
 const show = (req, res) =>{
     const {id} = req.params
 
@@ -18,7 +20,7 @@ const create = (req, res) => {
     // console.log(body.body)
 
     const comment = {
-        "_id": contactsLength + 1,
+        _id: contacts.length + 1,
         ...body,
         postId: 1
     }

@@ -1,14 +1,16 @@
 const vehicles = require("../data/vehicles")
 
+//getAll
 const list = (req,res) => {
     res.json(vehicles)
 }
 
+//getByID
 const show = (req, res) =>{
     const {id} = req.params
 
     const foundvehicles = vehicles.find((vehicle) => {
-        return vehicles._id === Number(id)
+        return vehicle._id === Number(id)
     })
     res.json(foundvehicles)
 }
@@ -18,7 +20,7 @@ const create = (req, res) => {
     // console.log(body.body)
 
     const vehicle = {
-        "_id": vehiclesLength + 1,
+        _id: vehicles.length + 1,
         ...body,
         postId: 1
     }

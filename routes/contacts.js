@@ -7,7 +7,7 @@ const contactsControllers = require("../controller/contacts")
 router.get("/contacts", contactsControllers.list)
 
 //get comment by ID
-router.get("/contacts/comment/:id", contactsControllers.show )
+router.get("/contacts/:id", contactsControllers.show )
 
 //create comment
 router.post("/contacts", contactsControllers.create)

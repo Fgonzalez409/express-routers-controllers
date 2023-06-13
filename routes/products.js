@@ -7,7 +7,7 @@ const productsControllers = require("../controller/products")
 router.get("/products", productsControllers.list)
 
 //get comment by ID
-router.get("/products/comment/:id", productsControllers.show )
+router.get("/products/:id", productsControllers.show )
 
 //create comment
 router.post("/products", productsControllers.create)
